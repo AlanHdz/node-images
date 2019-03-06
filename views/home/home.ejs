@@ -1,0 +1,25 @@
+<%+ extend('app/layout') %>
+
+<%+ section('content') %>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="card-columns">
+                <% images.forEach(function (image) {  %>
+                    <div class="card animated fadeInDown">
+                        <img src="<%= image.path %>" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-title"><%= image.title %></p>
+                            <p class="card-text"><%= image.description %></p>
+                            <p class="card-text"><%= format(image.created_at) %></p>
+                            <a href="/image/<%= image._id%> " class="btn btn-primary">
+                                View Profile
+                            </a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+<%+ endSection %>

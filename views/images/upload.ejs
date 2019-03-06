@@ -1,0 +1,33 @@
+<%+ extend('app/layout') %>
+
+<%+ section('content') %>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                    <input type="file" name="image" class="custom-file-input" id="inputGroupFile">
+                                    <label for="inputGroupFile" class="custom-file-label">Imagen</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="title" class="form-control" placeholder="Titulo de la imagen">
+                            </div>
+                            <div class="form-group">
+                                <textarea style="resize: none;" name="description" class="form-control" placeholder="Descripción de la imagen" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-block btn-success">
+                                    Subir
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%+ endSection %>

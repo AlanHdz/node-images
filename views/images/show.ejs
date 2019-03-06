@@ -1,0 +1,21 @@
+<%+ extend('app/layout') %>
+
+<%+ section('content') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card animated fadeInDown">
+                    <img src="<%= image.path %>" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-title"><%= image.title %></p>
+                        <p class="card-text"><%= image.description %></p>
+                        <p class="card-text"><%= format(image.created_at) %></p>
+                        <a href="/image/<%= image._id%>/delete" class="btn btn-danger">
+                            Delete image
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%+ endSection %>
