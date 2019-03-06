@@ -1,0 +1,4 @@
+public/
+database.js
+node_modules/
+package-lock.json
